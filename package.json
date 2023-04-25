@@ -4,7 +4,8 @@
   "description": "Plataforma de gestión e inscripción de eventos",
   "main": "login.js",
   "scripts": {
-    "start": "nodemon --exec node js/server.js"
+    "start": "nodemon --exec node js/server.js",
+    "build": "node js/server.js"
   },
   "repository": {
     "type": "git",
