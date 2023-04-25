@@ -6,7 +6,10 @@
   "scripts": {
     "start": "nodemon --exec node js/server.js",
     "build": "node js/server.js",
-    "smoke-test": "mocha js/smoke-test.js"
+    "smoke-test": "mocha js/smoke-test.js",
+    "dev": "set NODE_ENV=development&& node js/server.js",
+    "prod": "set NODE_ENV=production&& node js/server.js",
+    "test": "set NODE_ENV=testing&& mocha js/smoke-test.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,7 @@
   "homepage": "https://github.com/Sebas807/Gestion-Configuracion#readme",
   "dependencies": {
     "css-loader": "^6.7.3",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "firebase": "^9.19.1",
     "html-webpack-plugin": "^5.5.0",

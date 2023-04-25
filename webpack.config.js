@@ -2,9 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const mode = process.env.NODE_ENV === 'production' ? 'production' : 
+            process.env.NODE_ENV === 'testing' ? 'testing' : 'development';
 
 module.exports={
-    mode:'development',
+    mode: mode,
     entry: {
         login: './js/login.js',
         interfaz_admin: './js/interfaz_admin.js',
