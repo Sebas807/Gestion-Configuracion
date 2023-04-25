@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Gestión de Eventos</title>
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1a28e5f39b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/estilos.css">       
+    <script type="module" src="./css/interfaz_admin.bundle.js"></script>
+</head>
+<header>   
+    <div class="overlay">  
+        <img src="/static/img/escudo.png" allign="right"  width="150" height="130">    
+        <h1>Gestionar Eventos</h1>
+        <a  class="btn_logout" href="login.html" id="btn_log"><i class="fa-solid fa-right-from-bracket" style="font-size:50px"></i></a>
+    </div>
+</header>
+
+<body>
+    <br>
+    <center>
+        <table class="options">
+            <tr>
+                <th><button class="btn" id="btn-edit">Actualizar un evento</button></th>
+                <th></th>
+                <th></th>
+                <th><i class="fa-solid fa-pen"></i></th>
+            </tr>
+        </table>
+    </center>
+    <center>
+        <br> 
+        <table class="head_user">
+            <th class="id_info">
+                <input type="text" value="Id del evento" readonly>
+                <input type="text" value="Nombre del evento" readonly>
+                <input type="text" value="Lugar del evento" readonly>
+                <input type="text" value="Fecha y hora" readonly>
+                <input type="text" value="Cupos disponibles" readonly>
+                <input type="text" value="Duración (horas)" readonly>
+                <input type="text" value="Acciones" readonly>
+            </th>
+        </table>
+        <div id="user_table">
+        </div> 
+    </center>
+    <center>
+        <br>
+        <table class="option">
+            <tr>
+                <th> <button type="submit" class="icon"><i class="fa-solid fa-plus" id="btn_add"></i></button> </th>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
