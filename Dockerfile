@@ -1,6 +1,6 @@
 FROM node:19-alpine
 
-WORKDIR /ProyectoGestion
+WORKDIR /Proyecto Gestión-Configuración
 
 COPY package.json .
 
