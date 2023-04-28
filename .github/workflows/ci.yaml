@@ -21,7 +21,14 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run build 
-      - run: npm run smoke-test
+      - name: Install dependencies    
+        run: npm ci
+      - name: Build project
+        run: npm run build 
+      - name: Start server
+        run: npm run start & wait
+      - name: Run smoke tests
+        run: npm run smoke-test
+      - name: Stop server
+        run: taskkill /F /IM node.exe
 
