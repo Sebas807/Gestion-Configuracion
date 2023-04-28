@@ -5,7 +5,7 @@
   "main": "login.js",
   "scripts": {
     "start": "nodemon --exec node js/server.js",
-    "build": "node js/server.js",
+    "build": "npx webpack",
     "smoke-test": "mocha js/smoke-test.js",
     "dev": "set NODE_ENV=development&& node js/server.js",
     "prod": "set NODE_ENV=production&& node js/server.js",
