@@ -26,4 +26,4 @@ jobs:
         password: ${{ env.DOCKER_PASSWORD }}
       
     - name: Push Docker image to DockerHub
-      run: docker push sebas807/gestion_configuracion:05
+      run: docker push gestion_configuracion:05
