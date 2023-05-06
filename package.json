@@ -2,7 +2,7 @@
   "name": "proyecto-gestion-configuracion",
   "version": "0.1.0",
   "description": "Plataforma de gestión e inscripción de eventos",
-  "main": "login.js",
+  "main": "js/server.js",
   "scripts": {
     "build": "npx webpack",
     "start": "nodemon --exec node js/server.js",
