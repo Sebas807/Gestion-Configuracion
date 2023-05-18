@@ -17,11 +17,11 @@ export class Gestion{
         }
     }
 
-    /* abrir_formulario_de_eventos(){ //abre la pestaña html "add_evento"
+    abrir_formulario_de_eventos(){ //abre la pestaña html "add_evento"
         let btnAdd = document.getElementById("btn_add")
-        btnAdd.addEventListener("click", () => window.open('../html/add_evento.html', '_top'), false)
+        btnAdd.addEventListener("click", () => window.location.href = '/agregar_evento.html', false);
         gestion.cargar_datos();
-    }*/
+    }
 
     /*abrir_formulario_de_editar(){ //abre la pestaña html "update_evento"
         let btnEdit = document.getElementById("btn-edit")
@@ -63,7 +63,7 @@ export class Gestion{
 let datable;
 let gestion = new Gestion()
 window.addEventListener("load", gestion.cargar_datos(), false);
-// window.addEventListener("load", gestion.abrir_formulario_de_eventos(), false);
+window.addEventListener("load", gestion.abrir_formulario_de_eventos(), false);
 // window.addEventListener("load", gestion.abrir_formulario_de_editar(), false);
 window.addEventListener("load", gestion.validar_cerrar_sesion(), false);
 window.deleteEvent = gestion.eliminar_evento

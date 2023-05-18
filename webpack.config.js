@@ -10,6 +10,7 @@ module.exports={
     entry: {
         login: './js/login.js',
         interfaz_admin: './js/interfaz_admin.js',
+        agregar_evento: './js/agregar_evento.js',
     },
     output:{
         path: path.resolve(__dirname, 'css'),
@@ -31,6 +32,10 @@ module.exports={
         new htmlWebpackPlugin({
             filename:'interfaz_admin.html',
             template:'./html/interfaz_admin.html'
+        }),
+        new htmlWebpackPlugin({
+            filename:'agregar_evento.html',
+            template:'./html/agregar_evento.html'
         }),
     ]
 };
