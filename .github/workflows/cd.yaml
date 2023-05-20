@@ -28,9 +28,9 @@ jobs:
     - name: Push Docker image to DockerHub
       run: docker push sebas807/gestion_configuracion:opcx
   lint:
-  name: Lint
-  runs-on: ubuntu-latest
-  steps:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
     - name: Check out code
       uses: actions/checkout@v2
 
@@ -38,7 +38,7 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
       with:
-        terraform_version: 1.X.X
+        terraform_version: 1.4.6
 
 
     - name: Run terraform fmt check
