@@ -1,1 +1,12 @@
 node_modules
+terraform/.terraform
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+mi-llave.pem
+smunoz368.pem
+css/agregar_evento.bundle.js
+css/agregar_evento.html
+css/interfaz_admin.bundle.js
+css/interfaz_admin.html
+css/login.bundle.js
+css/login.html
