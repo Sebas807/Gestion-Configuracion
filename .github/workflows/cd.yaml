@@ -66,3 +66,10 @@ jobs:
         cd terraform/
         terraform plan -input=false -no-color 
 
+
+    - name: Apply Terraform
+      if: ${{ steps.plan.outcome == 'success' }}
+      run: |
+        cd terraform/
+        terraform apply -input=false -auto-approve
+
