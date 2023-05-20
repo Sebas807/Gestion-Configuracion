@@ -1,27 +1,27 @@
 terraform {
-    required_providers {
-        aws = {
-            source  = "hashicorp/aws"
-        }
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
     }
+  }
 }
 
 
 provider "aws" {
-    region  = "us-east-1"
+  region = "us-east-1"
 }
 
 
 resource "aws_instance" "app_server" {
-    ami           = "ami-0889a44b331db0194"
-    instance_type = "t2.micro"
-    security_groups = [aws_security_group.allow_ssh.name]
-    key_name = "smunoz368"
+  ami             = "ami-0889a44b331db0194"
+  instance_type   = "t2.micro"
+  security_groups = [aws_security_group.allow_ssh.name]
+  key_name        = "smunoz368"
 
-    # https://github.com/hashicorp/terraform-provider-aws/issues/23315
-    user_data_replace_on_change = true
+  # https://github.com/hashicorp/terraform-provider-aws/issues/23315
+  user_data_replace_on_change = true
 
-    user_data = <<-EOF
+  user_data = <<-EOF
         #!/bin/bash
         set -ex
         sudo yum update -y
@@ -33,46 +33,46 @@ resource "aws_instance" "app_server" {
     EOF
 
 
-    tags = {
+  tags = {
     Name = "smunoz368"
-    }
+  }
 }
 
 resource "aws_security_group" "allow_ssh" {
-    name        = "allow-smunoz368"
-    description = "Allow inbound traffic"
+  name        = "allow-smunoz368"
+  description = "Allow inbound traffic"
 
 
-    ingress {
+  ingress {
     description      = "SSH from VPC"
     from_port        = 80
     to_port          = 80
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
-    }
+  }
 
 
-    ingress {
+  ingress {
     description      = "HTTP from VPC"
     from_port        = 3000
     to_port          = 3000
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
-    }
+  }
 
 
-    egress {
+  egress {
     from_port        = 0
     to_port          = 0
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
-    }
+  }
 
 
-    tags = {
+  tags = {
     Name = "allow_smunoz368"
-    }
+  }
 }

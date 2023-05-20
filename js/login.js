@@ -2,8 +2,6 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { getDoc, collection, deleteDoc, doc } from "firebase/firestore/lite";
 import { auth, db } from "../js/firebase.js";
 
-// xD
-
 class Usuario{
     constructor(){
 
