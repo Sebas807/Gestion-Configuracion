@@ -34,12 +34,12 @@ resource "aws_instance" "app_server" {
 
 
   tags = {
-    Name = "smunoz368"
+    Name = "smunoz368@"
   }
 }
 
 resource "aws_security_group" "allow_ssh" {
-  name        = "allow-smunoz368"
+  name        = "allow-smunoz368@"
   description = "Allow inbound traffic"
 
 
@@ -73,6 +73,6 @@ resource "aws_security_group" "allow_ssh" {
 
 
   tags = {
-    Name = "allow_smunoz368"
+    Name = "allow_smunoz368@"
   }
 }
